@@ -45,4 +45,10 @@ class ShopsController extends Controller
 			return redirect("/shops/".$shop->id);
 		}
 
+		public function destroy(Request $req, $id)
+		{
+			$shop = Shop::find($id);
+			$shop->delete();
+			return redirect("/shops");
+		}
 }

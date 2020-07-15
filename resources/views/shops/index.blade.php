@@ -15,7 +15,14 @@
     <td><a href="/shops/{{$shop->id}}">{{$shop->name}}</a></td>
     <td>{{$shop->owner_name}}</td>
     <td>{{$shop->description}}</td>
-    <td><a href="/shop/{{$shop->id}}/edit" class="btn btn-success">EDIT</a></td>
+    <td>
+      <form action="/shop/{{$shop->id}}" method="post">
+        <a href="/shop/{{$shop->id}}/edit" class="btn btn-success">EDIT</a>
+        @csrf
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit" class="btn btn-danger">DELETE</button>
+      </form>
+    </td>
   </tr>
   @endforeach
 </table>
