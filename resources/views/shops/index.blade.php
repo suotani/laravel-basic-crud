@@ -1,3 +1,5 @@
+@extends("layouts.base")
+@section("main")
 <h1>shop list</h1>
 
 <table class="table">
@@ -14,3 +16,4 @@
   </tr>
   @endforeach
 </table>
+@endsection
