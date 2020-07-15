@@ -37,4 +37,12 @@ class ShopsController extends Controller
 			$shop = Shop::find($id);
 			return view("shops.edit", compact("shop"));
 		}
+
+		public function update(Request $req, $id)
+		{
+			$shop = Shop::find($id);
+			$shop->fill($req->except('_token', '_method'))->save();
+			return redirect("/shops/".$shop->id);
+		}
+
 }
