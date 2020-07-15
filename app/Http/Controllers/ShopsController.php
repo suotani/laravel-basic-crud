@@ -31,4 +31,10 @@ class ShopsController extends Controller
 			
 			return redirect("/shops");
 		}
+
+		public function edit($id)
+		{
+			$shop = Shop::find($id);
+			return view("shops.edit", compact("shop"));
+		}
 }

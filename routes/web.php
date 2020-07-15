@@ -20,4 +20,5 @@ Route::get('/', function () {
 Route::get("/shops", "ShopsController@index");
 Route::get("/shops/new", "ShopsController@create");
 Route::get("/shops/{id}", "ShopsController@show");
-Route::post("/shops", "Shopscontroller@store");
+Route::post("/shops", "ShopsController@store");
+Route::get("/shop/{id}/edit", "ShopsController@edit");
