@@ -11,5 +11,11 @@ class ShopsController extends Controller
     {
 				$shops = Shop::orderBy("age", "asc")->get();
 				return view("shops.index", ["shops" => $shops]);
-    }
+		}
+		
+		public function show($id)
+		{
+			$shop = Shop::find($id);
+			return view("shops.show", compact("shop"));
+		}
 }

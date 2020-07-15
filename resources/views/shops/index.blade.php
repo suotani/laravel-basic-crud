@@ -10,7 +10,7 @@
   </tr>
   @foreach($shops as $shop)
   <tr>
-    <td>{{$shop->name}}</td>
+    <td><a href="/shops/{{$shop->id}}">{{$shop->name}}</a></td>
     <td>{{$shop->owner_name}}</td>
     <td>{{$shop->description}}</td>
   </tr>
