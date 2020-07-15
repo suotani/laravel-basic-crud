@@ -24,6 +24,6 @@
     <td>{{$shop->description}}</td>
   </tr>
 </table>
-<a href="/shops" class="btn btn-primary">Back</a>
+<a href="/shops" class="btn btn-secondary">Back</a>
 @endsection
 

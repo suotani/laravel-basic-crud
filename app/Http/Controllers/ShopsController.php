@@ -18,4 +18,9 @@ class ShopsController extends Controller
 			$shop = Shop::find($id);
 			return view("shops.show", compact("shop"));
 		}
+
+		public function create()
+		{
+			return view("shops.create");
+		}
 }
