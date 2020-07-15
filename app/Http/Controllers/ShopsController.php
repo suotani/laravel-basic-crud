@@ -23,4 +23,12 @@ class ShopsController extends Controller
 		{
 			return view("shops.create");
 		}
+
+		public function store(Request $req)
+		{
+			$shop = new Shop();
+			$shop->fill($req->except('_token'))->save();
+			
+			return redirect("/shops");
+		}
 }

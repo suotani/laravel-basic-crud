@@ -3,7 +3,8 @@
 @section("main")
 <h1>New Shop</h1>
 
-<form>
+<form action="/shops" method="post">
+  @csrf
   <div class="form-group">
     <label for="exampleInputEmail1">Name</label>
     <input type="text" name="name" class="form-control" aria-describedby="emailHelp">
@@ -26,7 +27,7 @@
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Description</label>
-    <textarea name="descrition" class="form-control" aria-describedby="emailHelp">
+    <textarea name="description" class="form-control" aria-describedby="emailHelp">
     </textarea>
   </div>
   <a href="/shops" class="btn btn-secondary">Back</a>
