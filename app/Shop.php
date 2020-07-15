@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Shot extends Model
+class Shop extends Model
 {
     //
 }
