@@ -2,6 +2,7 @@
 @section("main")
 <h1>shop list</h1>
 
+<a class="btn btn-info" href="/shops/new">+Add Shop</a>
 <table class="table">
   <tr>
     <th>Name</th>
