@@ -41,6 +41,7 @@ class ShopsController extends Controller
 
 		public function update(Request $req, $id)
 		{
+			$this->validate($req, Shop::$validates);
 			$shop = Shop::find($id);
 			$shop->fill($req->except('_token', '_method'))->save();
 			return redirect("/shops/".$shop->id);
