@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+ul li.alert {
+  margin-bottom: 5px;
+  padding: 6px 16px;
+}
+
+input.alert {
+  border: solid 1px #f87a7a;
+}
+
