@@ -2,7 +2,13 @@
 
 @section("main")
 <h1>New Shop</h1>
-
+@if(count($errors) > 0)
+  <ul>
+    @foreach($errors->all() as $error)
+      <li class="alert">{{$error}}</li>
+    @endforeach
+  </ul>
+@endif
 <form action="/shop/{{$shop->id}}" method="post">
   @csrf
   @method("PATCH")

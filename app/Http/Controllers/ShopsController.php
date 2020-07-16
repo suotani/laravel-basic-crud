@@ -26,6 +26,7 @@ class ShopsController extends Controller
 
 		public function store(Request $req)
 		{
+			$this->validate($req, Shop::$validates);
 			$shop = new Shop();
 			$shop->fill($req->except('_token'))->save();
 			
