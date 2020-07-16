@@ -5,7 +5,7 @@
 
 <form action="/shop/{{$shop->id}}" method="post">
   @csrf
-  <input type="hidden" name="_method" value="patch">
+  @method("PATCH")
   <div class="form-group">
     <label for="exampleInputEmail1">Name</label>
     <input type="text" name="name" class="form-control" value="{{$shop->name}}">

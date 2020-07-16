@@ -19,7 +19,7 @@
       <form action="/shop/{{$shop->id}}" method="post">
         <a href="/shop/{{$shop->id}}/edit" class="btn btn-success">EDIT</a>
         @csrf
-        <input type="hidden" name="_method" value="delete">
+        @method("DELETE")
         <button type="submit" class="btn btn-danger">DELETE</button>
       </form>
     </td>
