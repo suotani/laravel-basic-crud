@@ -15,7 +15,7 @@ function add_class($errors, $name)
   return count($errors->get($name)) > 0 ? "alert" : "";
 }
 ?>
-<form action="/shop/{{$shop->id}}" method="post">
+<form action="/shops/{{$shop->id}}" method="post">
   @csrf
   @method("PATCH")
   <div class="form-group">

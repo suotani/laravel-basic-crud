@@ -2,7 +2,7 @@
 @section("main")
 <h1>shop list</h1>
 
-<a class="btn btn-info" href="/shops/new">+Add Shop</a>
+<a class="btn btn-info" href="/shops/create">+Add Shop</a>
 <table class="table">
   <tr>
     <th>Name</th>
@@ -16,8 +16,8 @@
     <td>{{$shop->owner_name}}</td>
     <td>{{$shop->description}}</td>
     <td>
-      <form action="/shop/{{$shop->id}}" method="post">
-        <a href="/shop/{{$shop->id}}/edit" class="btn btn-success">EDIT</a>
+      <form action="/shops/{{$shop->id}}" method="post">
+        <a href="/shops/{{$shop->id}}/edit" class="btn btn-success">EDIT</a>
         @csrf
         @method("DELETE")
         <button type="submit" class="btn btn-danger">DELETE</button>
