@@ -22,4 +22,5 @@ Route::get('/', "ShopsController@index");
 // Route::get("/shop/{id}/edit", "ShopsController@edit");
 // Route::patch("/shop/{id}", "ShopsController@update");
 // Route::delete("/shop/{id}", "ShopsController@destroy");
+Route::get("/shops/csv", "ShopsController@csv");
 Route::resource('shops', 'ShopsController');

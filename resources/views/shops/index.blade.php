@@ -3,6 +3,7 @@
 <h1>shop list</h1>
 
 <a class="btn btn-info" href="/shops/create">+Add Shop</a>
+<a class="btn btn-primary" href="/shops/csv">Download CSV</a>
 <table class="table">
   <tr>
     <th>Name</th>

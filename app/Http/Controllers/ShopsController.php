@@ -12,6 +12,29 @@ class ShopsController extends Controller
 				$shops = Shop::orderBy("age", "asc")->get();
 				return view("shops.index", ["shops" => $shops]);
 		}
+
+		public function csv()
+		{
+			return response()
+			  -> streamDownload(function(){
+					$data = "Name,Owner,Age,Address,PhoneNumber,Description\n";
+					$shops = Shop::all();
+					foreach($shops as $shop){
+						$shop_data = 
+							$shop->name.",".
+							$shop->owner_name.",".
+							$shop->age.",".
+							$shop->address.",".
+							$shop->phone_number.",".
+							$shop->description."\n";
+						$data = $data.$shop_data;
+					}
+					print($data);
+				},
+				"shops.csv",
+				["content-type" => "text/csv"]
+			);
+		}
 		
 		public function show($id)
 		{
